@@ -14,12 +14,11 @@ const ClickBtn = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (user.energy < user.limitEnergy) {
-        // Додаємо енергію, але не більше, ніж ліміт
         const newEnergy = user.energy + 0.1;
         const limitedEnergy = Math.min(newEnergy, user.limitEnergy);
         dispatch(addEnergy(limitedEnergy - user.energy));
       }
-    }, 1000); // 1000 мс = 1 секунда
+    }, 1000);
 
     return () => clearInterval(interval);
   }, [user.energy, user.limitEnergy, dispatch]);
@@ -29,8 +28,8 @@ const ClickBtn = () => {
       return alert("Not enough energy");
     }
 
-    dispatch(removeEnergy(pay)); // Віднімання енергії за клік
-    dispatch(updateBalance({ currencyType, pay })); // Оновлення балансу
+    dispatch(removeEnergy(pay));
+    dispatch(updateBalance({ currencyType, pay }));
   };
 
   return (
