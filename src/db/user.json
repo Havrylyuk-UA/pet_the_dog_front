@@ -1,0 +1,72 @@
+[
+  {
+    "profile": "Pavlo",
+    "energy": 5,
+    "xp": 0,
+    "lvl": 0,
+    "xpToLevelUp": 100,
+    "perClick": 1,
+    "perSecond": 0,
+    "balance": {
+      "gold": 0,
+      "gems": 0
+    },
+    "army": [
+      {
+        "name": "Mad Dog",
+        "price": 10,
+        "multiple": 1.5,
+        "income": 0.001,
+        "count": 0,
+        "nlvl": 0,
+        "armyLvl": 1,
+        "armyUpgradeCost": 20,
+        "upgradeMultiplier": 1.8
+      },
+      {
+        "name": "Alpha Wolf",
+        "price": 50,
+        "multiple": 2,
+        "income": 0.005,
+        "count": 0,
+        "nlvl": 1,
+        "armyLvl": 1,
+        "armyUpgradeCost": 100,
+        "upgradeMultiplier": 2.5
+      },
+      {
+        "name": "Silver Tiger",
+        "price": 150,
+        "multiple": 3,
+        "income": 0.01,
+        "count": 0,
+        "nlvl": 2,
+        "armyLvl": 1,
+        "armyUpgradeCost": 200,
+        "upgradeMultiplier": 3.5
+      },
+      {
+        "name": "Golden Lion",
+        "price": 500,
+        "multiple": 5,
+        "income": 0.05,
+        "count": 0,
+        "nlvl": 3,
+        "armyLvl": 1,
+        "armyUpgradeCost": 500,
+        "upgradeMultiplier": 6
+      },
+      {
+        "name": "Mystic Dragon",
+        "price": 1000,
+        "multiple": 8,
+        "income": 0.1,
+        "count": 0,
+        "nlvl": 4,
+        "armyLvl": 1,
+        "armyUpgradeCost": 1000,
+        "upgradeMultiplier": 10
+      }
+    ]
+  }
+]

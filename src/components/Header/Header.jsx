@@ -1,7 +1,7 @@
-const Header = ({ count, card }) => {
+const Header = () => {
   return (
     <>
-      Total: {Math.round(count)} Card: {card}
+      Total: {} Card: {}
     </>
   );
 };

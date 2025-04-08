@@ -1,5 +1,5 @@
-const ClickBtn = ({ click }) => {
-  return <button onClick={click}>Pet</button>;
+const ClickBtn = () => {
+  return <button>Pet</button>;
 };
 
 export default ClickBtn;
