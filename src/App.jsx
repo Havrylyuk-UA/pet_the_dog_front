@@ -10,7 +10,6 @@ function App() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: "column",
         gap: "20px",
         height: "100vh",
       }}
