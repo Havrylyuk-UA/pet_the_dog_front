@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import {
-  updateBalance,
+  addBalance,
   removeEnergy,
   addEnergy,
 } from "../../redux/user/userSlice";
@@ -29,7 +29,7 @@ const ClickBtn = () => {
     }
 
     dispatch(removeEnergy(pay));
-    dispatch(updateBalance({ currencyType, pay }));
+    dispatch(addBalance({ currencyType, pay }));
   };
 
   return (

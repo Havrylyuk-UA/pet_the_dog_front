@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/Header/Header";
 import ClickBtn from "./components/ClickBtn/ClickBtn";
-import ByNeCard from "./components/ByNeCard/ByNeCard";
+import ArmyList from "./components/ArmyList/ArmyList";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
     >
       <Header />
       <ClickBtn />
-      <ByNeCard />
+      <ArmyList />
     </div>
   );
 }

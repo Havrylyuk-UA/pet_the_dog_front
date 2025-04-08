@@ -8,7 +8,7 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    updateBalance: (state, action) => {
+    addBalance: (state, action) => {
       const { currencyType, pay } = action.payload;
 
       if (currencyType === "gold") {
@@ -17,15 +17,25 @@ const userSlice = createSlice({
         state.balance.gems += pay;
       }
     },
-    removeEnergy: (state, action) => {
-      state.energy -= action.payload;
+    removeBalance: (state, action) => {
+      const { currencyType, pay } = action.payload;
+
+      if (currencyType === "gold") {
+        state.balance.gold -= pay;
+      } else if (currencyType === "gems") {
+        state.balance.gems -= pay;
+      }
     },
     addEnergy: (state, action) => {
       state.energy += action.payload;
     },
+    removeEnergy: (state, action) => {
+      state.energy -= action.payload;
+    },
   },
 });
 
-export const { updateBalance, removeEnergy, addEnergy } = userSlice.actions;
+export const { addBalance, removeBalance, removeEnergy, addEnergy } =
+  userSlice.actions;
 
 export default userSlice.reducer;

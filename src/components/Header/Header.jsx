@@ -10,7 +10,7 @@ const Header = () => {
       <span>Level: {user.lvl}</span>
       <span>XP: {user.xp}</span>
       <span>NextLVL: {user.xpToLevelUp}</span>
-      <span>Energy: {user.energy.toFixed(2).replace(/\.00$/, "")}</span>
+      <span>Energy: {Math.round(user.energy)}</span>
       <span>Gold: {user.balance.gold}</span>
       <span>Diamond: {user.balance.gems}</span>
       <span>Per Click: {user.perClick}</span>
