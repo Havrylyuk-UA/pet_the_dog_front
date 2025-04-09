@@ -8,7 +8,7 @@ const ArmyList = () => {
 
   const dispatch = useDispatch();
 
-  const handleBuyItem = () => {
+  const handleBuyItem = (currencyType, pay) => {
     dispatch(removeBalance({ currencyType, pay }));
   };
 
@@ -16,7 +16,10 @@ const ArmyList = () => {
     <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
       {user.army.map((unit, index) => (
         <li key={index}>
-          <ArmyListItem unit={unit} buyItem={() => handleBuyItem()} />
+          <ArmyListItem
+            unit={unit}
+            buyItem={() => handleBuyItem("gold", unit.price)}
+          />
         </li>
       ))}
     </ul>
