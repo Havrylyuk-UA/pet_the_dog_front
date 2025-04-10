@@ -3,6 +3,7 @@ import {
   addBalance,
   removeEnergy,
   addEnergy,
+  accrualBalance,
 } from "../../redux/user/userSlice";
 import { userSelector } from "../../redux/user/selectors";
 import { useEffect } from "react";
@@ -12,7 +13,7 @@ const ClickBtn = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const energyInterval = setInterval(() => {
       if (user.energy < user.limitEnergy) {
         const newEnergy = user.energy + 0.1;
         const limitedEnergy = Math.min(newEnergy, user.limitEnergy);
@@ -20,12 +21,20 @@ const ClickBtn = () => {
       }
     }, 1000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(energyInterval);
   }, [user.energy, user.limitEnergy, dispatch]);
+
+  useEffect(() => {
+    const perSecInterval = setInterval(() => {
+      dispatch(accrualBalance(user.perSecond));
+    }, 1000);
+
+    return () => clearInterval(perSecInterval);
+  }, [dispatch, user.perSecond]);
 
   const handleAddBalance = (currencyType, pay) => {
     if (user.energy < 1) {
-      return alert("Not enough energy");
+      return;
     }
 
     dispatch(removeEnergy(pay));

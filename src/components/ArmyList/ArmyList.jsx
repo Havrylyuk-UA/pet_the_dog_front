@@ -1,15 +1,20 @@
 import { useDispatch, useSelector } from "react-redux";
 import { userSelector } from "../../redux/user/selectors";
 import ArmyListItem from "../ArmyListItem/ArmyListItem";
-import { removeBalance } from "../../redux/user/userSlice";
+import { removeBalance, updatePerSecond } from "../../redux/user/userSlice";
 
 const ArmyList = () => {
   const user = useSelector(userSelector);
 
   const dispatch = useDispatch();
 
-  const handleBuyItem = (currencyType, pay) => {
+  const handleBuyItem = (currencyType, pay, perSec, name) => {
+    if (user.balance.gold < pay) {
+      return;
+    }
+
     dispatch(removeBalance({ currencyType, pay }));
+    dispatch(updatePerSecond({ perSec, name }));
   };
 
   return (
@@ -18,7 +23,9 @@ const ArmyList = () => {
         <li key={index}>
           <ArmyListItem
             unit={unit}
-            buyItem={() => handleBuyItem("gold", unit.price)}
+            buyItem={() =>
+              handleBuyItem("gold", unit.price, unit.income, unit.name)
+            }
           />
         </li>
       ))}

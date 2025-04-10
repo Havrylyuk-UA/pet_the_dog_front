@@ -2,14 +2,15 @@
   {
     "profile": "Pavlo",
     "energy": 10,
-    "limitEnergy": 5,
+    "limitEnergy": 10,
     "xp": 0,
     "lvl": 0,
     "xpToLevelUp": 100,
     "perClick": 1,
     "perSecond": 0,
+    "hidePs": 0,
     "balance": {
-      "gold": 0,
+      "gold": 1500,
       "gems": 0
     },
     "army": [
