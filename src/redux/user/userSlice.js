@@ -41,7 +41,7 @@ const userSlice = createSlice({
       const unit = state.army.find((u) => u.name === name);
 
       unit.count += 1;
-      unit.price = unit.price * 1.5;
+      unit.price = unit.price * 1.25;
 
       state.perSecond += perSec;
     },
