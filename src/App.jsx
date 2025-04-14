@@ -11,7 +11,7 @@ function App() {
         justifyContent: "center",
         alignItems: "center",
         gap: "20px",
-        height: "100vh",
+        height: "95vh",
       }}
     >
       <Header />

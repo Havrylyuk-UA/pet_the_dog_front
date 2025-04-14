@@ -8,9 +8,10 @@
     "xpToLevelUp": 100,
     "perClick": 1,
     "perSecond": 0,
-    "hidePs": 0,
     "balance": {
-      "gold": 1500,
+      "cooper": 0,
+      "silver": 0,
+      "gold": 0,
       "gems": 0
     },
     "army": [
@@ -68,6 +69,171 @@
         "armyLvl": 1,
         "armyUpgradeCost": 1000,
         "upgradeMultiplier": 10
+      },
+      {
+        "name": "Shadow Panther",
+        "price": 2000,
+        "multiple": 12,
+        "income": 0.2,
+        "count": 0,
+        "nlvl": 5,
+        "armyLvl": 1,
+        "armyUpgradeCost": 2000,
+        "upgradeMultiplier": 13
+      },
+      {
+        "name": "Crimson Phoenix",
+        "price": 4000,
+        "multiple": 17,
+        "income": 0.4,
+        "count": 0,
+        "nlvl": 6,
+        "armyLvl": 1,
+        "armyUpgradeCost": 4000,
+        "upgradeMultiplier": 17
+      },
+      {
+        "name": "Iron Golem",
+        "price": 8000,
+        "multiple": 23,
+        "income": 0.8,
+        "count": 0,
+        "nlvl": 7,
+        "armyLvl": 1,
+        "armyUpgradeCost": 8000,
+        "upgradeMultiplier": 22
+      },
+      {
+        "name": "Storm Basilisk",
+        "price": 16000,
+        "multiple": 30,
+        "income": 1.6,
+        "count": 0,
+        "nlvl": 8,
+        "armyLvl": 1,
+        "armyUpgradeCost": 16000,
+        "upgradeMultiplier": 28
+      },
+      {
+        "name": "Ancient Behemoth",
+        "price": 32000,
+        "multiple": 38,
+        "income": 3.2,
+        "count": 0,
+        "nlvl": 9,
+        "armyLvl": 1,
+        "armyUpgradeCost": 32000,
+        "upgradeMultiplier": 35
+      },
+      {
+        "name": "Frost Wyrm",
+        "price": 64000,
+        "multiple": 47,
+        "income": 6.4,
+        "count": 0,
+        "nlvl": 10,
+        "armyLvl": 1,
+        "armyUpgradeCost": 64000,
+        "upgradeMultiplier": 43
+      },
+      {
+        "name": "Thunder Roc",
+        "price": 128000,
+        "multiple": 57,
+        "income": 12.8,
+        "count": 0,
+        "nlvl": 11,
+        "armyLvl": 1,
+        "armyUpgradeCost": 128000,
+        "upgradeMultiplier": 52
+      },
+      {
+        "name": "Void Serpent",
+        "price": 256000,
+        "multiple": 68,
+        "income": 25.6,
+        "count": 0,
+        "nlvl": 12,
+        "armyLvl": 1,
+        "armyUpgradeCost": 256000,
+        "upgradeMultiplier": 62
+      },
+      {
+        "name": "Celestial Griffin",
+        "price": 512000,
+        "multiple": 80,
+        "income": 51.2,
+        "count": 0,
+        "nlvl": 13,
+        "armyLvl": 1,
+        "armyUpgradeCost": 512000,
+        "upgradeMultiplier": 73
+      },
+      {
+        "name": "Obsidian Colossus",
+        "price": 1024000,
+        "multiple": 93,
+        "income": 102.4,
+        "count": 0,
+        "nlvl": 14,
+        "armyLvl": 1,
+        "armyUpgradeCost": 1024000,
+        "upgradeMultiplier": 85
+      },
+      {
+        "name": "Nether Reaper",
+        "price": 2048000,
+        "multiple": 107,
+        "income": 204.8,
+        "count": 0,
+        "nlvl": 15,
+        "armyLvl": 1,
+        "armyUpgradeCost": 2048000,
+        "upgradeMultiplier": 98
+      },
+      {
+        "name": "Chrono Drake",
+        "price": 4096000,
+        "multiple": 122,
+        "income": 409.6,
+        "count": 0,
+        "nlvl": 16,
+        "armyLvl": 1,
+        "armyUpgradeCost": 4096000,
+        "upgradeMultiplier": 112
+      },
+      {
+        "name": "Eclipse Warden",
+        "price": 8192000,
+        "multiple": 138,
+        "income": 819.2,
+        "count": 0,
+        "nlvl": 17,
+        "armyLvl": 1,
+        "armyUpgradeCost": 8192000,
+        "upgradeMultiplier": 127
+      },
+      {
+        "name": "Lightforged Titan",
+        "price": 16384000,
+        "multiple": 155,
+        "income": 1638.4,
+        "count": 0,
+        "nlvl": 18,
+        "armyLvl": 1,
+        "armyUpgradeCost": 16384000,
+        "upgradeMultiplier": 143
+      },
+      {
+        "name": "Aether Overlord",
+        "price": 32768000,
+        "multiple": 173,
+        "income": 3276.8,
+        "count": 0,
+        "nlvl": 19,
+        "armyLvl": 1,
+        "armyUpgradeCost": 32768000,
+        "upgradeMultiplier": 160
       }
     ]
   }

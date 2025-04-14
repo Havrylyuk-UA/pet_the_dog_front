@@ -43,7 +43,7 @@ const ClickBtn = () => {
 
   return (
     <div>
-      <button onClick={() => handleAddBalance("gold", 1)}>Pet</button>
+      <button onClick={() => handleAddBalance("cooper", 1)}>Pet</button>
     </div>
   );
 };
