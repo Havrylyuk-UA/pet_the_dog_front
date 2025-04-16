@@ -13,7 +13,9 @@ const ArmyList = () => {
       return;
     }
 
-    dispatch(removeBalance({ currencyType, pay }));
+    const currency = toString(currencyType);
+
+    dispatch(removeBalance({ currency, pay }));
     dispatch(updatePerSecond({ perSec, name }));
   };
 
@@ -24,7 +26,7 @@ const ArmyList = () => {
           <ArmyListItem
             unit={unit}
             buyItem={() =>
-              handleBuyItem("gold", unit.price, unit.income, unit.name)
+              handleBuyItem(unit.currency, unit.price, unit.income, unit.name)
             }
           />
         </li>

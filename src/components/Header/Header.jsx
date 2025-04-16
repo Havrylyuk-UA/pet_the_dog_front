@@ -17,7 +17,7 @@ const Header = () => {
       </span>
       <span>Diamond: {user.balance.gems}</span>
       <span>Per Click: {user.perClick}</span>
-      <span>Per Second: {user.perSecond.toFixed(3)}</span>
+      <span>Per Second: {user.perSecond.toFixed(3)}/s</span>
     </div>
   );
 };

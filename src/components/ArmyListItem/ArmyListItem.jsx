@@ -8,7 +8,8 @@ const ArmyListItem = ({ unit, buyItem }) => {
 
   return (
     <div style={{ display: "flex", gap: "5px" }}>
-      <strong>{unit.name}</strong> — Price: {Math.floor(unit.price)}, Gold/s:
+      <strong>{unit.name}</strong> — Price: {Math.floor(unit.price)}{" "}
+      {unit.currency}, Gold/s:
       {unit.income}, Count: {unit.count}
       <button onClick={() => buyItem()}>Buy</button>
       <button disabled={!isEnoughtGold}>Upgrade: {unit.armyUpgradeCost}</button>

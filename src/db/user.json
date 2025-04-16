@@ -17,6 +17,7 @@
     "army": [
       {
         "name": "Mad Dog",
+        "currency": "cooper",
         "price": 10,
         "multiple": 1.5,
         "income": 0.001,
