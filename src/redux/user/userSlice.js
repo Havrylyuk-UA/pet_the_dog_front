@@ -33,16 +33,8 @@ const userSlice = createSlice({
     },
     removeBalance: (state, action) => {
       const { currencyType, pay } = action.payload;
-      if (currencyType === "cooper") {
-        state.balance.cooper -= pay;
-      }
-      if (currencyType === "silver") {
-        state.balance.silver -= pay;
-      }
-      if (currencyType === "gold") {
-        state.balance.gold -= pay;
-      } else if (currencyType === "gems") {
-        state.balance.gems -= pay;
+      if (state.balance[currencyType] !== undefined) {
+        state.balance[currencyType] -= pay;
       }
     },
     addEnergy: (state, action) => {

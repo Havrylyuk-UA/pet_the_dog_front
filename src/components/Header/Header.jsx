@@ -12,8 +12,9 @@ const Header = () => {
       <span>NextLVL: {user.xpToLevelUp}</span>
       <span>Energy: {Math.floor(user.energy)}</span>
       <span>
-        Cooper: {user.balance.cooper}, Silver: {user.balance.silver}, Gold:
-        {user.balance.gold}
+        Cooper: {Math.floor(user.balance.cooper)}, Silver:{" "}
+        {Math.floor(user.balance.silver)}, Gold:
+        {Math.floor(user.balance.gold)}
       </span>
       <span>Diamond: {user.balance.gems}</span>
       <span>Per Click: {user.perClick}</span>

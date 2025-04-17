@@ -9,13 +9,13 @@ const ArmyList = () => {
   const dispatch = useDispatch();
 
   const handleBuyItem = (currencyType, pay, perSec, name) => {
-    if (user.balance.gold < pay) {
+    if (user.balance[currencyType] < pay) {
+      console.log("Error");
+
       return;
     }
 
-    const currency = toString(currencyType);
-
-    dispatch(removeBalance({ currency, pay }));
+    dispatch(removeBalance({ currencyType, pay }));
     dispatch(updatePerSecond({ perSec, name }));
   };
 
