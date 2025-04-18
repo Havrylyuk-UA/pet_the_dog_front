@@ -19,9 +19,20 @@ const Header = () => {
     <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
       <span>Name: {user.profile}</span>
       <span>Level: {user.lvl}</span>
-      <span>XP: {Math.floor(user.xp)}</span>
+      <span>
+        {/* XP: {Math.floor(user.xp)} */} <label for="file">XP progress:</label>{" "}
+        <progress max={user.xpToLevelUp} value={user.xp}>
+          {((user.xp / user.xpToLevelUp) * 100).toFixed(0)}%
+        </progress>
+      </span>
       <span>NextLVL: {user.xpToLevelUp}</span>
-      <span>Energy: {Math.floor(user.energy)}</span>
+      <span>
+        Energy:
+        {/* {Math.floor(user.energy)} */}{" "}
+        <progress max={user.limitEnergy} value={user.energy}>
+          {((user.energy / user.limitEnergy) * 100).toFixed(0)}%
+        </progress>
+      </span>
       <span>
         Cooper: {Math.floor(copper)}, Silver: {Math.floor(silver)}, Gold:
         {Math.floor(gold)}

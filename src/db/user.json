@@ -10,7 +10,7 @@
     "updPerClickCost": 15,
     "perSecond": 0,
     "balance": {
-      "coin": 10,
+      "coin": 10000,
       "gems": 0
     },
     "army": [
