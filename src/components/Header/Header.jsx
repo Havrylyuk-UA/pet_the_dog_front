@@ -20,18 +20,19 @@ const Header = () => {
       <span>Name: {user.profile}</span>
       <span>Level: {user.lvl}</span>
       <span>
-        {/* XP: {Math.floor(user.xp)} */} <label for="file">XP progress:</label>{" "}
+        <label for="file">XP progress:</label> {Math.floor(user.xp)}{" "}
         <progress max={user.xpToLevelUp} value={user.xp}>
           {((user.xp / user.xpToLevelUp) * 100).toFixed(0)}%
-        </progress>
+        </progress>{" "}
+        {user.xpToLevelUp}
       </span>
-      <span>NextLVL: {user.xpToLevelUp}</span>
       <span>
         Energy:
-        {/* {Math.floor(user.energy)} */}{" "}
+        {Math.floor(user.energy)}{" "}
         <progress max={user.limitEnergy} value={user.energy}>
           {((user.energy / user.limitEnergy) * 100).toFixed(0)}%
-        </progress>
+        </progress>{" "}
+        {user.limitEnergy}
       </span>
       <span>
         Cooper: {Math.floor(copper)}, Silver: {Math.floor(silver)}, Gold:
