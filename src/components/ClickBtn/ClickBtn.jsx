@@ -10,6 +10,7 @@ import {
 } from "../../redux/user/userSlice";
 import { userSelector } from "../../redux/user/selectors";
 import { useEffect } from "react";
+import { persistor } from "../../redux/store";
 
 const ClickBtn = () => {
   const user = useSelector(userSelector);
@@ -54,6 +55,11 @@ const ClickBtn = () => {
     dispatch(upgradeUserClick());
   };
 
+  const handleResetLS = () => {
+    persistor.purge(); // очищає localStorage
+    window.location.reload(); // щоб примусово перезавантажити та застосувати очищення
+  };
+
   // const isEnoughCoinToByUpd = user.balance.coin >= user.updPerClickCost;
 
   return (
@@ -67,6 +73,9 @@ const ClickBtn = () => {
         disabled
       >
         Upd Click: {user.updPerClickCost.toFixed(0)} coin
+      </button>
+      <button type="button" onClick={handleResetLS}>
+        Reset
       </button>
     </div>
   );

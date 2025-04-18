@@ -74,7 +74,7 @@ const userSlice = createSlice({
         state.xpToLevelUp = state.xpToLevelUp * 2;
         state.limitEnergy += 5;
       }
-      state.xp += state.perSecond * 0.001;
+      state.xp += state.perSecond * 0.1;
     },
   },
 });
