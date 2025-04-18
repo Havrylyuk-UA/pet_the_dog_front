@@ -1,23 +1,22 @@
 [
   {
-    "profile": "Pavlo",
+    "profile": "Grim",
     "energy": 10,
     "limitEnergy": 10,
     "xp": 0,
     "lvl": 0,
     "xpToLevelUp": 100,
     "perClick": 1,
+    "updPerClickCost": 15,
     "perSecond": 0,
     "balance": {
-      "cooper": 0,
-      "silver": 0,
-      "gold": 0,
+      "coin": 0,
       "gems": 0
     },
     "army": [
       {
         "name": "Mad Dog",
-        "currency": "cooper",
+        "currency": "coin",
         "price": 10,
         "multiple": 1.5,
         "income": 0.001,
@@ -29,6 +28,7 @@
       },
       {
         "name": "Alpha Wolf",
+        "currency": "coin",
         "price": 50,
         "multiple": 2,
         "income": 0.005,
@@ -40,6 +40,7 @@
       },
       {
         "name": "Silver Tiger",
+        "currency": "coin",
         "price": 150,
         "multiple": 3,
         "income": 0.01,
@@ -51,6 +52,7 @@
       },
       {
         "name": "Golden Lion",
+        "currency": "coin",
         "price": 500,
         "multiple": 5,
         "income": 0.05,
@@ -62,6 +64,7 @@
       },
       {
         "name": "Mystic Dragon",
+        "currency": "coin",
         "price": 1000,
         "multiple": 8,
         "income": 0.1,
@@ -73,6 +76,7 @@
       },
       {
         "name": "Shadow Panther",
+        "currency": "coin",
         "price": 2000,
         "multiple": 12,
         "income": 0.2,
@@ -84,6 +88,7 @@
       },
       {
         "name": "Crimson Phoenix",
+        "currency": "coin",
         "price": 4000,
         "multiple": 17,
         "income": 0.4,
@@ -95,6 +100,7 @@
       },
       {
         "name": "Iron Golem",
+        "currency": "coin",
         "price": 8000,
         "multiple": 23,
         "income": 0.8,
@@ -106,6 +112,7 @@
       },
       {
         "name": "Storm Basilisk",
+        "currency": "coin",
         "price": 16000,
         "multiple": 30,
         "income": 1.6,
@@ -117,6 +124,7 @@
       },
       {
         "name": "Ancient Behemoth",
+        "currency": "coin",
         "price": 32000,
         "multiple": 38,
         "income": 3.2,
@@ -128,6 +136,7 @@
       },
       {
         "name": "Frost Wyrm",
+        "currency": "coin",
         "price": 64000,
         "multiple": 47,
         "income": 6.4,
@@ -139,6 +148,7 @@
       },
       {
         "name": "Thunder Roc",
+        "currency": "coin",
         "price": 128000,
         "multiple": 57,
         "income": 12.8,
@@ -150,6 +160,7 @@
       },
       {
         "name": "Void Serpent",
+        "currency": "coin",
         "price": 256000,
         "multiple": 68,
         "income": 25.6,
@@ -161,6 +172,7 @@
       },
       {
         "name": "Celestial Griffin",
+        "currency": "coin",
         "price": 512000,
         "multiple": 80,
         "income": 51.2,
@@ -172,6 +184,7 @@
       },
       {
         "name": "Obsidian Colossus",
+        "currency": "coin",
         "price": 1024000,
         "multiple": 93,
         "income": 102.4,
@@ -183,6 +196,7 @@
       },
       {
         "name": "Nether Reaper",
+        "currency": "coin",
         "price": 2048000,
         "multiple": 107,
         "income": 204.8,
@@ -194,6 +208,7 @@
       },
       {
         "name": "Chrono Drake",
+        "currency": "coin",
         "price": 4096000,
         "multiple": 122,
         "income": 409.6,
@@ -205,6 +220,7 @@
       },
       {
         "name": "Eclipse Warden",
+        "currency": "coin",
         "price": 8192000,
         "multiple": 138,
         "income": 819.2,
@@ -216,6 +232,7 @@
       },
       {
         "name": "Lightforged Titan",
+        "currency": "coin",
         "price": 16384000,
         "multiple": 155,
         "income": 1638.4,
@@ -227,6 +244,7 @@
       },
       {
         "name": "Aether Overlord",
+        "currency": "coin",
         "price": 32768000,
         "multiple": 173,
         "income": 3276.8,

@@ -1,22 +1,30 @@
 import { useDispatch, useSelector } from "react-redux";
 import { userSelector } from "../../redux/user/selectors";
 import ArmyListItem from "../ArmyListItem/ArmyListItem";
-import { removeBalance, updatePerSecond } from "../../redux/user/userSlice";
+import {
+  buyNewUnit,
+  removeBalance,
+  updatePerSecond,
+  upgradeUnit,
+} from "../../redux/user/userSlice";
 
 const ArmyList = () => {
   const user = useSelector(userSelector);
 
   const dispatch = useDispatch();
 
-  const handleBuyItem = (currencyType, pay, perSec, name) => {
-    if (user.balance[currencyType] < pay) {
-      console.log("Error");
-
-      return;
-    }
+  const handleBuyItem = (currencyType, pay, name) => {
+    if (user.balance[currencyType] < pay) return;
 
     dispatch(removeBalance({ currencyType, pay }));
-    dispatch(updatePerSecond({ perSec, name }));
+    dispatch(buyNewUnit({ name }));
+    dispatch(updatePerSecond());
+  };
+
+  const handleBuyUpdUnit = (unit, currencyType, pay) => {
+    dispatch(upgradeUnit(unit));
+    dispatch(removeBalance({ currencyType, pay }));
+    dispatch(updatePerSecond());
   };
 
   return (
@@ -25,8 +33,9 @@ const ArmyList = () => {
         <li key={i} style={{ listStyle: "none" }}>
           <ArmyListItem
             unit={unit}
-            buyItem={() =>
-              handleBuyItem(unit.currency, unit.price, unit.income, unit.name)
+            buyItem={() => handleBuyItem(unit.currency, unit.price, unit.name)}
+            updUnit={() =>
+              handleBuyUpdUnit(unit, unit.currency, unit.armyUpgradeCost)
             }
           />
         </li>

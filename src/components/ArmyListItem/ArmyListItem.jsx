@@ -1,18 +1,24 @@
 import { useSelector } from "react-redux";
 import { userSelector } from "../../redux/user/selectors";
 
-const ArmyListItem = ({ unit, buyItem }) => {
+const ArmyListItem = ({ unit, buyItem, updUnit }) => {
   const user = useSelector(userSelector);
 
-  const isEnoughtGold = user.balance.gold >= unit.armyUpgradeCost;
+  const isEnoughtCoinToBy = user.balance.coin >= unit.price;
+  const isEnoughtCoinToUpgrade =
+    unit.count > 0 && user.balance.coin >= unit.armyUpgradeCost;
 
   return (
     <div style={{ display: "flex", gap: "5px" }}>
       <strong>{unit.name}</strong> — Price: {Math.floor(unit.price)}{" "}
-      {unit.currency}, Gold/s:
-      {unit.income}, Count: {unit.count}
-      <button onClick={() => buyItem()}>Buy</button>
-      <button disabled={!isEnoughtGold}>Upgrade: {unit.armyUpgradeCost}</button>
+      {unit.currency}, Inc/s:
+      {unit.income}, Count: {unit.count}, lvl {unit.armyLvl}
+      <button onClick={() => buyItem()} disabled={!isEnoughtCoinToBy}>
+        Buy
+      </button>
+      <button onClick={() => updUnit()} disabled={!isEnoughtCoinToUpgrade}>
+        Upgrade: {Math.floor(unit.armyUpgradeCost)}
+      </button>
     </div>
   );
 };

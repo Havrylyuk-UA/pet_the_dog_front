@@ -4,6 +4,9 @@ import {
   removeEnergy,
   addEnergy,
   accrualBalance,
+  removeBalance,
+  upgradeUserClick,
+  userUpdExp,
 } from "../../redux/user/userSlice";
 import { userSelector } from "../../redux/user/selectors";
 import { useEffect } from "react";
@@ -27,6 +30,7 @@ const ClickBtn = () => {
   useEffect(() => {
     const perSecInterval = setInterval(() => {
       dispatch(accrualBalance(user.perSecond));
+      dispatch(userUpdExp());
     }, 1000);
 
     return () => clearInterval(perSecInterval);
@@ -41,9 +45,29 @@ const ClickBtn = () => {
     dispatch(addBalance({ currencyType, pay }));
   };
 
+  const constHandleUpdClick = () => {
+    if (user.balance.coin < user.updPerClickCost) {
+      return;
+    }
+
+    dispatch(removeBalance("coin", user.updPerClickCost));
+    dispatch(upgradeUserClick());
+  };
+
+  const isEnoughCoinToByUpd = user.balance.coin >= user.updPerClickCost;
+
   return (
-    <div>
-      <button onClick={() => handleAddBalance("cooper", 1)}>Pet</button>
+    <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
+      <button onClick={() => handleAddBalance("coin", user.perClick)}>
+        Buy
+      </button>
+      <button
+        onClick={() => constHandleUpdClick()}
+        // disabled={!isEnoughCoinToByUpd}
+        disabled
+      >
+        Upd Click: {user.updPerClickCost.toFixed(0)} coin
+      </button>
     </div>
   );
 };
