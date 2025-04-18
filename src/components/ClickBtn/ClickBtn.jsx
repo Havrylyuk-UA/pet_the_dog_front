@@ -54,7 +54,7 @@ const ClickBtn = () => {
     dispatch(upgradeUserClick());
   };
 
-  const isEnoughCoinToByUpd = user.balance.coin >= user.updPerClickCost;
+  // const isEnoughCoinToByUpd = user.balance.coin >= user.updPerClickCost;
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
