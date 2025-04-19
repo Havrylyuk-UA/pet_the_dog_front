@@ -10,11 +10,10 @@ const ArmyListItem = ({ unit, buyItem, updUnit }) => {
 
   return (
     <div style={{ display: "flex", gap: "5px" }}>
-      <strong>{unit.name}</strong> — Price: {Math.floor(unit.price)}{" "}
-      {unit.currency}, Inc/s:
+      <strong>{unit.name}</strong> — Inc/s:
       {unit.income}, Count: {unit.count}, lvl {unit.armyLvl}
       <button onClick={() => buyItem()} disabled={!isEnoughtCoinToBy}>
-        Buy
+        Buy {Math.floor(unit.price)}
       </button>
       <button onClick={() => updUnit()} disabled={!isEnoughtCoinToUpgrade}>
         Upgrade: {Math.floor(unit.armyUpgradeCost)}
