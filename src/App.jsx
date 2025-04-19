@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./components/Header/Header";
 import ClickBtn from "./components/ClickBtn/ClickBtn";
 import ArmyList from "./components/ArmyList/ArmyList";
