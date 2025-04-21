@@ -80,6 +80,7 @@ const ClickBtn = () => {
 
     if (isConfirmed) {
       await persistor.purge();
+      localStorage.clear();
       window.location.reload();
     }
   };
