@@ -7,6 +7,7 @@ import {
   removeBalance,
   upgradeUserClick,
   userUpdExp,
+  userActiveAutoClick,
 } from "../../redux/user/userSlice";
 import { userSelector } from "../../redux/user/selectors";
 import { useEffect } from "react";
@@ -37,30 +38,60 @@ const ClickBtn = () => {
     return () => clearInterval(perSecInterval);
   }, [dispatch, user.perSecond]);
 
-  const handleAddBalance = (currencyType, pay) => {
-    if (user.energy < 1) {
-      return;
-    }
+  useEffect(() => {
+    const autoclickInterval = setInterval(() => {
+      if (user.energy < 1) return;
 
-    dispatch(removeEnergy(pay));
-    dispatch(addBalance({ currencyType, pay }));
+      if (user.autoclick) {
+        const actualClickValue =
+          user.energy < user.perClick ? Math.floor(user.energy) : user.perClick;
+
+        dispatch(removeEnergy(actualClickValue));
+        dispatch(addBalance({ currencyType: "coin", pay: actualClickValue }));
+      }
+    }, 5000);
+
+    return () => clearInterval(autoclickInterval);
+  }, [user.energy, user.perClick, user.autoclick, dispatch]);
+
+  const handleAddBalance = (currencyType, pay) => {
+    if (user.energy < 1) return;
+
+    const actualPay =
+      user.perClick > user.energy ? Math.floor(user.energy) : pay;
+
+    dispatch(removeEnergy(actualPay));
+    dispatch(addBalance({ currencyType, pay: actualPay }));
   };
 
-  const constHandleUpdClick = () => {
+  const constHandleUpdClick = (currencyType, pay) => {
     if (user.balance.coin < user.updPerClickCost) {
       return;
     }
 
-    dispatch(removeBalance("coin", user.updPerClickCost));
+    dispatch(removeBalance({ currencyType, pay }));
     dispatch(upgradeUserClick());
   };
 
   const handleResetLS = () => {
-    persistor.purge(); // очищає localStorage
-    window.location.reload(); // щоб примусово перезавантажити та застосувати очищення
+    const isConfirmed = window.confirm(
+      "Are you sure you want to reset? This action cannot be undone."
+    );
+
+    if (isConfirmed) {
+      persistor.purge();
+      window.location.reload();
+    }
   };
 
-  // const isEnoughCoinToByUpd = user.balance.coin >= user.updPerClickCost;
+  const activeAutoClick = (currencyType, pay) => {
+    dispatch(removeBalance({ currencyType, pay }));
+    dispatch(userActiveAutoClick());
+  };
+
+  const isEnoughCoinToByUpd = user.balance.coin >= user.updPerClickCost;
+  const isEnoughCoinToByAuto =
+    user.balance.coin >= user.autoClickCost && !user.autoclick;
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
@@ -68,11 +99,16 @@ const ClickBtn = () => {
         Buy
       </button>
       <button
-        onClick={() => constHandleUpdClick()}
-        // disabled={!isEnoughCoinToByUpd}
-        disabled
+        onClick={() => activeAutoClick("coin", user.perClick)}
+        disabled={!isEnoughCoinToByAuto}
       >
-        Upd Click: {user.updPerClickCost.toFixed(0)} coin
+        Autoclick: {user.autoClickCost} coin`s
+      </button>
+      <button
+        onClick={() => constHandleUpdClick("coin", user.updPerClickCost)}
+        disabled={!isEnoughCoinToByUpd}
+      >
+        Upd Click: {user.updPerClickCost.toFixed(0)} coin`s
       </button>
       <button type="button" onClick={handleResetLS}>
         Reset

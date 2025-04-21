@@ -7,7 +7,9 @@
     "lvl": 0,
     "xpToLevelUp": 100,
     "perClick": 1,
-    "updPerClickCost": 15,
+    "autoClickCost": 10000,
+    "autoclick": false,
+    "updPerClickCost": 100,
     "perSecond": 0,
     "balance": {
       "coin": 0,
