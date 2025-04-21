@@ -73,13 +73,13 @@ const ClickBtn = () => {
     dispatch(upgradeUserClick());
   };
 
-  const handleResetLS = () => {
+  const handleResetLS = async () => {
     const isConfirmed = window.confirm(
       "Are you sure you want to reset? This action cannot be undone."
     );
 
     if (isConfirmed) {
-      persistor.purge();
+      await persistor.purge();
       window.location.reload();
     }
   };
