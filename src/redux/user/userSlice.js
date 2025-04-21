@@ -63,7 +63,7 @@ const userSlice = createSlice({
       state.perSecond = removePrevPerSec + newIncome;
     },
     upgradeUserClick: (state) => {
-      state.updPerClickCost = state.updPerClickCost * 1.75;
+      state.updPerClickCost = state.updPerClickCost * 2.75;
       state.perClick += 1;
     },
     userUpdExp: (state) => {

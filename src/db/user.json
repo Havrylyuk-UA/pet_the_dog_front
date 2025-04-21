@@ -7,7 +7,7 @@
     "lvl": 0,
     "xpToLevelUp": 100,
     "perClick": 1,
-    "autoClickCost": 10000,
+    "autoClickCost": 5000,
     "autoclick": false,
     "updPerClickCost": 100,
     "perSecond": 0,

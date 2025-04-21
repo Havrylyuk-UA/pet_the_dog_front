@@ -10,12 +10,18 @@ import {
   userActiveAutoClick,
 } from "../../redux/user/userSlice";
 import { userSelector } from "../../redux/user/selectors";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { persistor } from "../../redux/store";
 
 const ClickBtn = () => {
   const user = useSelector(userSelector);
   const dispatch = useDispatch();
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = (e) => {
+    setIsChecked(e.target.checked);
+  };
 
   useEffect(() => {
     const energyInterval = setInterval(() => {
@@ -73,16 +79,10 @@ const ClickBtn = () => {
     dispatch(upgradeUserClick());
   };
 
-  const handleResetLS = async () => {
-    const isConfirmed = window.confirm(
-      "Are you sure you want to reset? This action cannot be undone."
-    );
-
-    if (isConfirmed) {
-      await persistor.purge();
-      await localStorage.clear();
-      window.location.reload();
-    }
+  const handleResetLS = () => {
+    persistor.purge();
+    localStorage.clear();
+    window.location.reload();
   };
 
   const activeAutoClick = (currencyType, pay) => {
@@ -111,9 +111,22 @@ const ClickBtn = () => {
       >
         Upd Click: {user.updPerClickCost.toFixed(0)} coin`s
       </button>
-      <button type="button" onClick={handleResetLS}>
-        Reset
-      </button>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <input
+          type="checkbox"
+          onChange={handleCheckboxChange}
+          checked={isChecked}
+        />
+        <button type="button" onClick={handleResetLS} disabled={!isChecked}>
+          Reset
+        </button>
+      </div>
     </div>
   );
 };
