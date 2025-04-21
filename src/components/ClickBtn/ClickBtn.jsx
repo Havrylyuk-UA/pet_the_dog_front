@@ -7,6 +7,7 @@ import {
   removeBalance,
   upgradeUserClick,
   userUpdExp,
+  userActiveAutoClick,
 } from "../../redux/user/userSlice";
 import { userSelector } from "../../redux/user/selectors";
 import { useEffect } from "react";
@@ -36,6 +37,22 @@ const ClickBtn = () => {
 
     return () => clearInterval(perSecInterval);
   }, [dispatch, user.perSecond]);
+
+  useEffect(() => {
+    const autoclickInterval = setInterval(() => {
+      if (user.energy < 1) return;
+
+      if (user.autoclick) {
+        const actualClickValue =
+          user.energy < user.perClick ? Math.floor(user.energy) : user.perClick;
+
+        dispatch(removeEnergy(actualClickValue));
+        dispatch(addBalance({ currencyType: "coin", pay: actualClickValue }));
+      }
+    }, 5000);
+
+    return () => clearInterval(autoclickInterval);
+  }, [user.energy, user.perClick, user.autoclick, dispatch]);
 
   const handleAddBalance = (currencyType, pay) => {
     if (user.energy < 1) return;
@@ -67,7 +84,14 @@ const ClickBtn = () => {
     }
   };
 
+  const activeAutoClick = (currencyType, pay) => {
+    dispatch(removeBalance({ currencyType, pay }));
+    dispatch(userActiveAutoClick());
+  };
+
   const isEnoughCoinToByUpd = user.balance.coin >= user.updPerClickCost;
+  const isEnoughCoinToByAuto =
+    user.balance.coin >= user.autoClickCost && !user.autoclick;
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
@@ -75,10 +99,16 @@ const ClickBtn = () => {
         Buy
       </button>
       <button
+        onClick={() => activeAutoClick("coin", user.perClick)}
+        disabled={!isEnoughCoinToByAuto}
+      >
+        Autoclick: {user.autoClickCost} coin`s
+      </button>
+      <button
         onClick={() => constHandleUpdClick("coin", user.updPerClickCost)}
         disabled={!isEnoughCoinToByUpd}
       >
-        Upd Click: {user.updPerClickCost.toFixed(0)} coin
+        Upd Click: {user.updPerClickCost.toFixed(0)} coin`s
       </button>
       <button type="button" onClick={handleResetLS}>
         Reset
