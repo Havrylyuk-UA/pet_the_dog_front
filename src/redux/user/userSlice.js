@@ -73,7 +73,20 @@ const userSlice = createSlice({
         state.xpToLevelUp = state.xpToLevelUp * 2;
         state.limitEnergy += 5;
       }
-      state.xp += state.perSecond * 0.1;
+      if (state.lvl <= 5) {
+        state.xp += state.perSecond * 0.1;
+      }
+      if (state.lvl <= 10) {
+        state.xp += state.perSecond * 0.01;
+      }
+      if (state.lvl <= 15) {
+        state.xp += state.perSecond * 0.001;
+      }
+      if (state.lvl <= 30) {
+        state.xp += state.perSecond * 0.0001;
+      } else {
+        state.xp += state.perSecond * 0.00001;
+      }
     },
     userActiveAutoClick: (state) => {
       state.autoclick = true;
