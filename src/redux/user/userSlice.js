@@ -58,12 +58,11 @@ const userSlice = createSlice({
 
       unit.armyLvl += 1;
       const newIncome = unit.income * unit.armyLvl * unit.count;
-      unit.armyUpgradeCost = unit.armyUpgradeCost * 1.25;
+      unit.armyUpgradeCost = unit.armyUpgradeCost * 1.75;
 
       state.perSecond = removePrevPerSec + newIncome;
     },
     upgradeUserClick: (state) => {
-      state.balance.coin -= state.updPerClickCost;
       state.updPerClickCost = state.updPerClickCost * 1.25;
       state.perClick += 1;
     },

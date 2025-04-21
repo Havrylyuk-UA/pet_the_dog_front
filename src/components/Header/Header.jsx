@@ -20,7 +20,7 @@ const Header = () => {
       <span>Name: {user.profile}</span>
       <span>Level: {user.lvl}</span>
       <span>
-        <label for="file">XP progress:</label> {Math.floor(user.xp)}{" "}
+        <label htmlFor="file">XP progress:</label> {Math.floor(user.xp)}{" "}
         <progress max={user.xpToLevelUp} value={user.xp}>
           {((user.xp / user.xpToLevelUp) * 100).toFixed(0)}%
         </progress>{" "}
