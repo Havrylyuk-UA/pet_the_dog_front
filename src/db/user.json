@@ -1,6 +1,7 @@
 [
   {
     "profile": "Grim",
+    "theme": "dark",
     "energy": 10,
     "limitEnergy": 10,
     "xp": 0,
