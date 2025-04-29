@@ -28,9 +28,9 @@ const ArmyList = () => {
   };
 
   return (
-    <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+    <ul>
       {user.army.map((unit, i) => (
-        <li key={i} style={{ listStyle: "none" }}>
+        <li key={i}>
           <ArmyListItem
             unit={unit}
             buyItem={() => handleBuyItem(unit.currency, unit.price, unit.name)}

@@ -1,8 +1,11 @@
 import { useSelector } from "react-redux";
-import { userSelector } from "../../redux/user/selectors";
+import { themeSelector, userSelector } from "../../redux/user/selectors";
+import clsx from "clsx";
+import css from "./Header.module.scss";
 
 const Header = () => {
   const user = useSelector(userSelector);
+  const theme = useSelector(themeSelector);
 
   const totalCopper = user.balance.coin;
 
@@ -16,7 +19,13 @@ const Header = () => {
   const copper = totalCopper % copperInSilver;
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+    <div
+      className={clsx(css.header_container, {
+        [css.header_container_dark]: theme === "dark",
+        [css.header_container_light]: theme === "light",
+        [css.header_container_colored]: theme === "colored",
+      })}
+    >
       <span>Name: {user.profile}</span>
       <span>Level: {user.lvl}</span>
       <span>

@@ -9,7 +9,7 @@ const ArmyListItem = ({ unit, buyItem, updUnit }) => {
     unit.count > 0 && user.balance.coin >= unit.armyUpgradeCost;
 
   return (
-    <div style={{ display: "flex", gap: "5px" }}>
+    <div>
       <strong>{unit.name}</strong> — Inc/s:
       {unit.income}, Count: {unit.count}, lvl {unit.armyLvl}
       <button onClick={() => buyItem()} disabled={!isEnoughtCoinToBy}>

@@ -4,15 +4,7 @@ import ArmyList from "./components/ArmyList/ArmyList";
 
 function App() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "20px",
-        height: "95vh",
-      }}
-    >
+    <div>
       <Header />
       <ClickBtn />
       <ArmyList />
