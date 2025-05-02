@@ -20,3 +20,27 @@ img {
   width: 100%;
   height: 100%;
 }
+
+li {
+  list-style: none;
+}
+
+.main_container {
+  height: 100vh;
+  width: 100%;
+}
+
+.main_container_dark {
+  background-color: $background-dark;
+  color: $text-dark;
+}
+
+.main_container_light {
+  background-color: $background-light;
+  color: $text-light;
+}
+
+.main_container_colored {
+  background-color: $background-colorful;
+  color: $text-colorful;
+}

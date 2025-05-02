@@ -91,6 +91,9 @@ const userSlice = createSlice({
     userActiveAutoClick: (state) => {
       state.autoclick = true;
     },
+    handleChangeTheme: (state, action) => {
+      state.theme = action.payload;
+    },
   },
 });
 
@@ -106,6 +109,7 @@ export const {
   upgradeUnit,
   buyNewUnit,
   userActiveAutoClick,
+  handleChangeTheme,
 } = userSlice.actions;
 
 export default userSlice.reducer;
