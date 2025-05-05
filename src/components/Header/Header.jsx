@@ -41,39 +41,55 @@ const Header = () => {
         [css.header_container_colored]: theme === "colored",
       })}
     >
-      <div className={css.header_profile}>
-        <span>Name: {user.profile}</span>
-        <span>Level: {user.lvl}</span>
-        <div className={css.heaer_progressbar}>
-          <span>
-            <label htmlFor="file">XP:</label> {Math.floor(user.xp)}{" "}
-            <progress max={user.xpToLevelUp} value={user.xp}>
-              {((user.xp / user.xpToLevelUp) * 100).toFixed(0)}%
-            </progress>{" "}
-            {user.xpToLevelUp}
-          </span>
-          <span>
-            Energy: {Math.floor(user.energy)}{" "}
-            <progress max={user.limitEnergy} value={user.energy}>
-              {((user.energy / user.limitEnergy) * 100).toFixed(0)}%
-            </progress>{" "}
-            {user.limitEnergy}
-          </span>
+      <div className={clsx(css.header_panel, css.d_f)}>
+        <div className={clsx(css.header_profile, css.d_f)}>
+          <div className={clsx(css.header_name_container, css.d_f)}>
+            <div className={css.header_name}>
+              <span>Name: {user.profile}</span>
+            </div>
+            <div className={clsx(css.header_name_info, css.d_f_c)}>
+              <span>Level: {user.lvl}</span>
+              <span>Per Click: {user.perClick}</span>
+            </div>
+          </div>
+          <div className={clsx(css.heaer_progressbar, css.d_f_c)}>
+            <span>
+              <label htmlFor="file">XP:</label> {Math.floor(user.xp)}{" "}
+              <progress max={user.xpToLevelUp} value={user.xp}>
+                {((user.xp / user.xpToLevelUp) * 100).toFixed(0)}%
+              </progress>{" "}
+              {user.xpToLevelUp}
+            </span>
+            <span>
+              Energy: {Math.floor(user.energy)}{" "}
+              <progress max={user.limitEnergy} value={user.energy}>
+                {((user.energy / user.limitEnergy) * 100).toFixed(0)}%
+              </progress>{" "}
+              {user.limitEnergy}
+            </span>
+          </div>
         </div>
-      </div>
-      <div className={css.header_balance}>
-        <span>Per Click: {user.perClick}</span>
-        <span>Income: {user.perSecond.toFixed(3)}/s</span>
-        <span>
-          Cooper: {Math.floor(copper)}, Silver: {Math.floor(silver)}, Gold:
-          {Math.floor(gold)}
-        </span>
-        <span>Diamond: {user.balance.gems}</span>
-      </div>
-      <div className={css.header_theme_btn}>
-        <button type="button" onClick={() => handleChangeThemeClick(theme)}>
-          Change theme
-        </button>
+        <div className={css.header_balance}>
+          <span>Income: {user.perSecond.toFixed(3)}/s</span>
+          <span>
+            Cooper: {Math.floor(copper)}, Silver: {Math.floor(silver)}, Gold:
+            {Math.floor(gold)}
+          </span>
+          <span>Diamond: {user.balance.gems}</span>
+        </div>
+        <div>
+          <button
+            className={clsx(css.header_theme_btn, {
+              [css.header_theme_btn_d]: theme === "dark",
+              [css.header_theme_btn_l]: theme === "light",
+              [css.header_theme_btn_c]: theme === "colored",
+            })}
+            type="button"
+            onClick={() => handleChangeThemeClick(theme)}
+          >
+            Theme
+          </button>
+        </div>
       </div>
     </div>
   );
