@@ -4,10 +4,14 @@
 
 .d_f {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .d_f_c {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -15,13 +19,12 @@
   height: 75px;
 
   .header_panel {
-    justify-content: space-between;
     margin: 0 15px;
     padding-top: 8px;
   }
 
   .header_name_container {
-    gap: 5px;
+    gap: 10px;
   }
 
   .header_name {
@@ -35,10 +38,12 @@
     margin-left: 15px;
   }
 
-  .heaer_progressbar {
+  .header_progressbar {
   }
 
   .header_balance {
+    margin-left: auto;
+    margin-right: auto;
     gap: 8px;
   }
 
@@ -50,7 +55,7 @@
 
   .header_theme_btn_d {
     background-color: $button-inactive-dark;
-    box-shadow: 0 0 0 $shadow-dark;
+    box-shadow: 0 2px 8px $shadow-dark;
     color: $text-dark;
     &:hover {
       background-color: $hover-dark;
@@ -59,7 +64,7 @@
 
   .header_theme_btn_l {
     background-color: $button-inactive-light;
-    box-shadow: 0 0 0 $shadow-light;
+    box-shadow: 0 2px 8px$shadow-light;
     color: $text-light;
 
     &:hover {
@@ -69,12 +74,28 @@
 
   .header_theme_btn_c {
     background-color: $button-inactive-colored;
-    box-shadow: 0 0 0 $shadow-colored;
+    box-shadow: 0 2px 8px $shadow-colored;
     color: $text-colored;
 
     &:hover {
       background-color: $hover-colored;
     }
+  }
+
+  .header_cooper {
+    color: $resource-copper;
+  }
+
+  .header_silver {
+    color: $resource-silver;
+  }
+
+  .header_gold {
+    color: $resource-gold;
+  }
+
+  .header_diamond {
+    color: $resource-diamond;
   }
 }
 

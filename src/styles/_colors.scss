@@ -3,7 +3,7 @@
 $background-dark: #1e1e2f;
 $text-dark: #f5f5f5;
 $hover-dark: #2c2c40;
-$shadow-dark: rgba(0, 0, 0, 0.6);
+$shadow-dark: rgba(148, 147, 147, 0.726);
 $button-active-dark: #3b82f6;
 $button-inactive-dark: #4b4b63;
 
@@ -12,23 +12,24 @@ $button-inactive-dark: #4b4b63;
 $background-light: #ffffff;
 $text-light: #1a1a1a;
 $hover-light: #f0f0f0;
-$shadow-light: rgba(0, 0, 0, 0.1);
+$shadow-light: rgba(0, 0, 0, 0.5);
 $button-active-light: #2563eb;
 $button-inactive-light: #d1d5db;
 
 // !Colored
 
-$background-colored: #f0f4ff;
-$text-colored: #1e3a8a;
-$hover-colored: #c7d2fe;
-$shadow-colored: rgba(30, 58, 138, 0.3);
-$button-active-colored: #6366f1;
-$button-inactive-colored: #a5b4fc;
+$background-colored: #e6f0ff;
+$text-colored: #14213d;
+$hover-colored: #b3cfff;
+$shadow-colored: rgba(20, 33, 61, 0.548);
+$button-active-colored: #2563eb;
+$button-inactive-colored: #93c5fd;
 
 // !Resources
 $resource-gold: #ffd700;
 $resource-silver: #c0c0c0;
 $resource-copper: #b87333;
+$resource-diamond: #00eeff;
 
 // !Progressbar
 $progress-xp: #9b59b6;

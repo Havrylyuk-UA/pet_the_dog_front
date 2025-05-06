@@ -28,19 +28,25 @@ const ArmyList = () => {
   };
 
   return (
-    <ul>
-      {user.army.map((unit, i) => (
-        <li key={i}>
-          <ArmyListItem
-            unit={unit}
-            buyItem={() => handleBuyItem(unit.currency, unit.price, unit.name)}
-            updUnit={() =>
-              handleBuyUpdUnit(unit, unit.currency, unit.armyUpgradeCost)
-            }
-          />
-        </li>
-      ))}
-    </ul>
+    <div>
+      <span>Income: {user.perSecond.toFixed(3)}/s</span>
+
+      <ul>
+        {user.army.map((unit, i) => (
+          <li key={i}>
+            <ArmyListItem
+              unit={unit}
+              buyItem={() =>
+                handleBuyItem(unit.currency, unit.price, unit.name)
+              }
+              updUnit={() =>
+                handleBuyUpdUnit(unit, unit.currency, unit.armyUpgradeCost)
+              }
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

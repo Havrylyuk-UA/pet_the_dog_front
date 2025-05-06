@@ -8,7 +8,7 @@ const Header = () => {
   const user = useSelector(userSelector);
   const theme = useSelector(themeSelector);
 
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
 
   const totalCopper = user.balance.coin;
 
@@ -23,15 +23,37 @@ const Header = () => {
 
   const handleChangeThemeClick = (theme) => {
     if (theme === "dark") {
-      dispath(handleChangeTheme("light"));
+      dispatch(handleChangeTheme("light"));
+    } else if (theme === "light") {
+      dispatch(handleChangeTheme("colored"));
+    } else if (theme === "colored") {
+      dispatch(handleChangeTheme("dark"));
     }
-    if (theme === "light") {
-      dispath(handleChangeTheme("colored"));
-    }
-    if (theme === "colored") {
-      dispath(handleChangeTheme("dark"));
-    } else return;
   };
+
+  const finalBalance = (totalCopper) => {
+    if (silver > silverInGold) {
+      return (
+        <span>
+          <span className={css.header_gold}>Gold</span>: {gold.toFixed(0)}
+        </span>
+      );
+    } else if (totalCopper >= copperInSilver) {
+      return (
+        <span>
+          <span className={css.header_silver}>Silver</span>: {silver.toFixed(0)}
+        </span>
+      );
+    } else {
+      return (
+        <span>
+          <span className={css.header_cooper}>Cooper</span>: {copper.toFixed(0)}
+        </span>
+      );
+    }
+  };
+
+  const balance = finalBalance();
 
   return (
     <div
@@ -45,14 +67,14 @@ const Header = () => {
         <div className={clsx(css.header_profile, css.d_f)}>
           <div className={clsx(css.header_name_container, css.d_f)}>
             <div className={css.header_name}>
-              <span>Name: {user.profile}</span>
+              <span>{user.profile}</span>
             </div>
             <div className={clsx(css.header_name_info, css.d_f_c)}>
               <span>Level: {user.lvl}</span>
               <span>Per Click: {user.perClick}</span>
             </div>
           </div>
-          <div className={clsx(css.heaer_progressbar, css.d_f_c)}>
+          <div className={clsx(css.header_progressbar, css.d_f_c)}>
             <span>
               <label htmlFor="file">XP:</label> {Math.floor(user.xp)}{" "}
               <progress max={user.xpToLevelUp} value={user.xp}>
@@ -69,13 +91,10 @@ const Header = () => {
             </span>
           </div>
         </div>
-        <div className={css.header_balance}>
-          <span>Income: {user.perSecond.toFixed(3)}/s</span>
-          <span>
-            Cooper: {Math.floor(copper)}, Silver: {Math.floor(silver)}, Gold:
-            {Math.floor(gold)}
-          </span>
-          <span>Diamond: {user.balance.gems}</span>
+        <div className={clsx(css.header_balance, css.d_f)}>
+          {balance}
+          <span className={css.header_diamond}>Diamond:</span>{" "}
+          {user.balance.gems}
         </div>
         <div>
           <button
