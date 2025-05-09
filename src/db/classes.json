@@ -1,0 +1,108 @@
+[
+  {
+    "classes": [
+      {
+        "name": "Warrior",
+        "skills": [
+          {
+            "name": "Shield Bash",
+            "type": "active",
+            "cooldown": 10,
+            "manaCost": 15,
+            "effect": "Stun enemy for 2 seconds",
+            "level": 1
+          }
+        ],
+        "bonuses": { "strength": 2, "armor": 1 },
+        "description": {
+          "en": "A battle-hardened warrior.",
+          "uk": "Воїн, загартований в боях."
+        }
+      },
+      {
+        "name": "Mage",
+        "skills": [
+          {
+            "name": "Fireball",
+            "type": "active",
+            "cooldown": 8,
+            "manaCost": 20,
+            "effect": "Deal damage to enemy",
+            "level": 1
+          }
+        ],
+        "bonuses": { "mana": 5, "intelligence": 3 },
+        "description": {
+          "en": "A master of arcane forces.",
+          "uk": "Майстер арканних сил."
+        }
+      },
+      {
+        "name": "Rogue",
+        "skills": [
+          {
+            "name": "Backstab",
+            "type": "active",
+            "cooldown": 6,
+            "manaCost": 10,
+            "effect": "Deal high damage to enemy from behind",
+            "level": 1
+          }
+        ],
+        "bonuses": { "agility": 3, "criticalHitChance": 0.2 },
+        "description": { "en": "A stealthy assassin.", "uk": "Стелс-ассасин." }
+      },
+      {
+        "name": "Hunter",
+        "skills": [
+          {
+            "name": "Trap",
+            "type": "active",
+            "cooldown": 12,
+            "manaCost": 15,
+            "effect": "Set a trap for the enemy",
+            "level": 1
+          }
+        ],
+        "bonuses": { "strength": 2, "stamina": 3 },
+        "description": {
+          "en": "A master of nature and survival.",
+          "uk": "Майстер природи та виживання."
+        }
+      },
+      {
+        "name": "Cleric",
+        "skills": [
+          {
+            "name": "Healing Light",
+            "type": "active",
+            "cooldown": 10,
+            "manaCost": 20,
+            "effect": "Heal an ally",
+            "level": 1
+          }
+        ],
+        "bonuses": { "intelligence": 3, "stamina": 2 },
+        "description": {
+          "en": "A healer of the wounded.",
+          "uk": "Цілитель поранених."
+        }
+      },
+      {
+        "name": "Paladin",
+        "skills": [
+          {
+            "name": "Divine Shield",
+            "type": "active",
+            "cooldown": 12,
+            "manaCost": 25,
+            "effect": "Shield the ally from damage",
+            "level": 1
+          }
+        ],
+        "bonuses": { "strength": 4, "armor": 3 },
+        "description": { "en": "A holy warrior.", "uk": "Святий воїн." }
+      }
+    ]
+  }
+]

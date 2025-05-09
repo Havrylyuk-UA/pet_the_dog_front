@@ -1,0 +1,48 @@
+[
+  {
+    "professions": [
+      {
+        "name": "Miner",
+        "level": 1,
+        "xp": 0,
+        "xpToLevelUp": 100,
+        "bonuses": { "miningSpeed": 10, "resourceYield": 5 }
+      },
+      {
+        "name": "Fisherman",
+        "level": 1,
+        "xp": 0,
+        "xpToLevelUp": 100,
+        "bonuses": { "fishingSpeed": 10, "fishQuality": 5 }
+      },
+      {
+        "name": "Herbalist",
+        "level": 1,
+        "xp": 0,
+        "xpToLevelUp": 100,
+        "bonuses": { "herbGatheringSpeed": 10, "herbQuality": 5 }
+      },
+      {
+        "name": "Alchemist",
+        "level": 1,
+        "xp": 0,
+        "xpToLevelUp": 100,
+        "bonuses": { "potionEfficiency": 10, "alchemySpeed": 5 }
+      },
+      {
+        "name": "Blacksmith",
+        "level": 1,
+        "xp": 0,
+        "xpToLevelUp": 100,
+        "bonuses": { "craftingSpeed": 10, "durabilityBonus": 5 }
+      },
+      {
+        "name": "Hunter",
+        "level": 1,
+        "xp": 0,
+        "xpToLevelUp": 100,
+        "bonuses": { "trackingSpeed": 10, "wildlifeKnowledge": 5 }
+      }
+    ]
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "factions": [
+      {
+        "name": "Ironclad Legion",
+        "alliance": 1,
+        "reputation": 0,
+        "rank": "Recruit",
+        "bonuses": { "armor": 2, "strength": 1 },
+        "description": {
+          "en": "A faction of disciplined warriors.",
+          "uk": "Фракція дисциплінованих воїнів."
+        }
+      },
+      {
+        "name": "Silver Alliance",
+        "alliance": 1,
+        "reputation": 0,
+        "rank": "Member",
+        "bonuses": { "agility": 3, "luck": 2 },
+        "description": {
+          "en": "Masters of precision and stealth.",
+          "uk": "Майстри точності та скритності."
+        }
+      },
+      {
+        "name": "Crimson Order",
+        "alliance": 1,
+        "reputation": 0,
+        "rank": "Initiate",
+        "bonuses": { "strength": 2, "criticalHitChance": 0.1 },
+        "description": {
+          "en": "A faction of elite warriors, ruthless and honorable.",
+          "uk": "Фракція елітних воїнів, безжальних та честних."
+        }
+      },
+      {
+        "name": "Black Iron Pact",
+        "alliance": 2,
+        "reputation": 0,
+        "rank": "Novice",
+        "bonuses": { "stamina": 3, "health": 10 },
+        "description": {
+          "en": "A tough faction known for its resilience.",
+          "uk": "Міцна фракція, відома своєю витривалістю."
+        }
+      },
+      {
+        "name": "Shadow Syndicate",
+        "alliance": 2,
+        "reputation": 0,
+        "rank": "Initiate",
+        "bonuses": { "stealth": 2, "criticalHitChance": 0.15 },
+        "description": {
+          "en": "A faction that thrives in the shadows, cold-blooded and calculating.",
+          "uk": "Фракція, що процвітає в тіні, холоднокровна та розрахункова."
+        }
+      },
+      {
+        "name": "Dawnborn Fellowship",
+        "alliance": 2,
+        "reputation": 0,
+        "rank": "Recruit",
+        "bonuses": { "luck": 3, "agility": 2 },
+        "description": {
+          "en": "A faction of bright and noble warriors.",
+          "uk": "Фракція яскравих та благородних воїнів."
+        }
+      }
+    ]
+  }
+]

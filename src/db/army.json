@@ -1,0 +1,222 @@
+[
+  {
+    "armies": [
+      {
+        "name": "Mad Dog",
+        "currency": "coin",
+        "price": 10,
+        "multiple": 1.5,
+        "income": 0.001,
+        "count": 0,
+        "nlvl": 0,
+        "armyLvl": 1,
+        "armyUpgradeCost": 20,
+        "upgradeMultiplier": 1.8
+      },
+      {
+        "name": "Alpha Wolf",
+        "currency": "coin",
+        "price": 50,
+        "multiple": 2,
+        "income": 0.005,
+        "count": 0,
+        "nlvl": 1,
+        "armyLvl": 1,
+        "armyUpgradeCost": 100,
+        "upgradeMultiplier": 2.5
+      },
+      {
+        "name": "Silver Tiger",
+        "currency": "coin",
+        "price": 150,
+        "multiple": 3,
+        "income": 0.01,
+        "count": 0,
+        "nlvl": 2,
+        "armyLvl": 1,
+        "armyUpgradeCost": 200,
+        "upgradeMultiplier": 3.5
+      },
+      {
+        "name": "Golden Lion",
+        "currency": "coin",
+        "price": 500,
+        "multiple": 5,
+        "income": 0.05,
+        "count": 0,
+        "nlvl": 3,
+        "armyLvl": 1,
+        "armyUpgradeCost": 500,
+        "upgradeMultiplier": 6
+      },
+      {
+        "name": "Mystic Dragon",
+        "currency": "coin",
+        "price": 1000,
+        "multiple": 8,
+        "income": 0.1,
+        "count": 0,
+        "nlvl": 4,
+        "armyLvl": 1,
+        "armyUpgradeCost": 1000,
+        "upgradeMultiplier": 10
+      },
+      {
+        "name": "Shadow Panther",
+        "currency": "coin",
+        "price": 2000,
+        "multiple": 12,
+        "income": 0.2,
+        "count": 0,
+        "nlvl": 5,
+        "armyLvl": 1,
+        "armyUpgradeCost": 2000,
+        "upgradeMultiplier": 13
+      },
+      {
+        "name": "Crimson Phoenix",
+        "currency": "coin",
+        "price": 4000,
+        "multiple": 17,
+        "income": 0.4,
+        "count": 0,
+        "nlvl": 6,
+        "armyLvl": 1,
+        "armyUpgradeCost": 4000,
+        "upgradeMultiplier": 17
+      },
+      {
+        "name": "Iron Golem",
+        "currency": "coin",
+        "price": 8000,
+        "multiple": 23,
+        "income": 0.8,
+        "count": 0,
+        "nlvl": 7,
+        "armyLvl": 1,
+        "armyUpgradeCost": 8000,
+        "upgradeMultiplier": 22
+      },
+      {
+        "name": "Storm Basilisk",
+        "currency": "coin",
+        "price": 16000,
+        "multiple": 30,
+        "income": 1.6,
+        "count": 0,
+        "nlvl": 8,
+        "armyLvl": 1,
+        "armyUpgradeCost": 16000,
+        "upgradeMultiplier": 28
+      },
+      {
+        "name": "Ancient Behemoth",
+        "currency": "coin",
+        "price": 32000,
+        "multiple": 38,
+        "income": 3.2,
+        "count": 0,
+        "nlvl": 9,
+        "armyLvl": 1,
+        "armyUpgradeCost": 32000,
+        "upgradeMultiplier": 35
+      },
+      {
+        "name": "Frost Wyrm",
+        "currency": "coin",
+        "price": 64000,
+        "multiple": 47,
+        "income": 6.4,
+        "count": 0,
+        "nlvl": 10,
+        "armyLvl": 1,
+        "armyUpgradeCost": 64000,
+        "upgradeMultiplier": 43
+      },
+      {
+        "name": "Thunder Roc",
+        "currency": "coin",
+        "price": 128000,
+        "multiple": 57,
+        "income": 12.8,
+        "count": 0,
+        "nlvl": 11,
+        "armyLvl": 1,
+        "armyUpgradeCost": 128000,
+        "upgradeMultiplier": 52
+      },
+      {
+        "name": "Void Serpent",
+        "currency": "coin",
+        "price": 256000,
+        "multiple": 68,
+        "income": 25.6,
+        "count": 0,
+        "nlvl": 12,
+        "armyLvl": 1,
+        "armyUpgradeCost": 256000,
+        "upgradeMultiplier": 62
+      },
+      {
+        "name": "Celestial Griffin",
+        "currency": "coin",
+        "price": 512000,
+        "multiple": 80,
+        "income": 51.2,
+        "count": 0,
+        "nlvl": 13,
+        "armyLvl": 1,
+        "armyUpgradeCost": 512000,
+        "upgradeMultiplier": 73
+      },
+      {
+        "name": "Obsidian Colossus",
+        "currency": "coin",
+        "price": 1024000,
+        "multiple": 93,
+        "income": 102.4,
+        "count": 0,
+        "nlvl": 14,
+        "armyLvl": 1,
+        "armyUpgradeCost": 1024000,
+        "upgradeMultiplier": 85
+      },
+      {
+        "name": "Nether Reaper",
+        "currency": "coin",
+        "price": 2048000,
+        "multiple": 107,
+        "income": 204.8,
+        "count": 0,
+        "nlvl": 15,
+        "armyLvl": 1,
+        "armyUpgradeCost": 2048000,
+        "upgradeMultiplier": 98
+      },
+      {
+        "name": "Chrono Drake",
+        "currency": "coin",
+        "price": 4096000,
+        "multiple": 122,
+        "income": 409.6,
+        "count": 0,
+        "nlvl": 16,
+        "armyLvl": 1,
+        "armyUpgradeCost": 4096000,
+        "upgradeMultiplier": 112
+      },
+      {
+        "name": "Eclipse Warden",
+        "currency": "coin",
+        "price": 8192000,
+        "multiple": 138,
+        "income": 819.2,
+        "count": 0,
+        "nlvl": 17,
+        "armyLvl": 1,
+        "armyUpgradeCost": 8192000,
+        "upgradeMultiplier": 127
+      }
+    ]
+  }
+]

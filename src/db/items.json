@@ -1,0 +1,123 @@
+[
+  {
+    "items": [
+      {
+        "id": "itm_001",
+        "name": "Iron Sword",
+        "slot": "main-hand",
+        "rarity": "common",
+        "statBonuses": { "strength": 2 },
+        "levelRequirement": 1,
+        "description": {
+          "en": "A basic iron sword.",
+          "uk": "Звичайний залізний меч."
+        }
+      },
+      {
+        "id": "itm_002",
+        "name": "Steel Sword",
+        "slot": "main-hand",
+        "rarity": "uncommon",
+        "statBonuses": { "strength": 4 },
+        "levelRequirement": 3,
+        "description": {
+          "en": "A sturdy steel sword.",
+          "uk": "Міцний сталевий меч."
+        }
+      },
+      {
+        "id": "itm_003",
+        "name": "Mage's Staff",
+        "slot": "main-hand",
+        "rarity": "common",
+        "statBonuses": { "intelligence": 3 },
+        "levelRequirement": 1,
+        "description": { "en": "A staff for mages.", "uk": "Палиця для магів." }
+      },
+      {
+        "id": "itm_004",
+        "name": "Sorcerer's Staff",
+        "slot": "main-hand",
+        "rarity": "uncommon",
+        "statBonuses": { "intelligence": 6 },
+        "levelRequirement": 4,
+        "description": {
+          "en": "A magical staff imbued with power.",
+          "uk": "Магічна палиця, наділена силою."
+        }
+      },
+      {
+        "id": "itm_005",
+        "name": "Shadow Dagger",
+        "slot": "main-hand",
+        "rarity": "common",
+        "statBonuses": { "agility": 2, "criticalHitChance": 0.1 },
+        "levelRequirement": 1,
+        "description": {
+          "en": "A small dagger for sneaky assassins.",
+          "uk": "Малий ніж для непомітних вбивць."
+        }
+      },
+      {
+        "id": "itm_006",
+        "name": "Assassin's Blade",
+        "slot": "main-hand",
+        "rarity": "uncommon",
+        "statBonuses": { "agility": 5, "criticalHitChance": 0.2 },
+        "levelRequirement": 3,
+        "description": {
+          "en": "A blade that excels in stealth.",
+          "uk": "Ніж, що перевершує в скритності."
+        }
+      },
+      {
+        "id": "itm_007",
+        "name": "Bow of the Hunter",
+        "slot": "main-hand",
+        "rarity": "common",
+        "statBonuses": { "strength": 2 },
+        "levelRequirement": 1,
+        "description": {
+          "en": "A simple bow used by hunters.",
+          "uk": "Простий лук, який використовують мисливці."
+        }
+      },
+      {
+        "id": "itm_008",
+        "name": "Master Hunter's Bow",
+        "slot": "main-hand",
+        "rarity": "uncommon",
+        "statBonuses": { "strength": 4, "stamina": 2 },
+        "levelRequirement": 4,
+        "description": {
+          "en": "A bow made for experienced hunters.",
+          "uk": "Лук, зроблений для досвідчених мисливців."
+        }
+      },
+      {
+        "id": "itm_009",
+        "name": "Healing Staff",
+        "slot": "main-hand",
+        "rarity": "common",
+        "statBonuses": { "intelligence": 2 },
+        "levelRequirement": 1,
+        "description": {
+          "en": "A staff used by healers.",
+          "uk": "Палиця, яку використовують цілющі."
+        }
+      },
+      {
+        "id": "itm_010",
+        "name": "Divine Healing Staff",
+        "slot": "main-hand",
+        "rarity": "uncommon",
+        "statBonuses": { "intelligence": 5, "stamina": 2 },
+        "levelRequirement": 5,
+        "description": {
+          "en": "A staff blessed with healing powers.",
+          "uk": "Палиця, благословенна цілющими силами."
+        }
+      }
+    ]
+  }
+]
