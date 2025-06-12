@@ -9,7 +9,7 @@ import {
   userUpdExp,
   userActiveAutoClick,
 } from "../../redux/user/userSlice";
-import { userSelector } from "../../redux/user/selectors";
+import { userSelector } from "../../redux/user/userSelectors";
 import { useEffect, useState } from "react";
 import { persistor } from "../../redux/store";
 

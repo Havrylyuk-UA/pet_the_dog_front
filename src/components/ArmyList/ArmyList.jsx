@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { userSelector } from "../../redux/user/selectors";
+import { userSelector } from "../../redux/units/unitsSelectors";
 import ArmyListItem from "../ArmyListItem/ArmyListItem";
 import {
   buyNewUnit,

@@ -4,7 +4,7 @@ import ArmyList from "./components/ArmyList/ArmyList";
 import css from "./index.module.scss";
 import clsx from "clsx";
 import { useSelector } from "react-redux";
-import { themeSelector } from "./redux/user/selectors";
+import { themeSelector } from "./redux/user/userSelectors";
 
 function App() {
   const theme = useSelector(themeSelector);

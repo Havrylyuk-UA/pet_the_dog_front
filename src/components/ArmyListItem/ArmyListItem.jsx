@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { userSelector } from "../../redux/user/selectors";
+import { userSelector } from "../../redux/units/unitsSelectors";
 
 const ArmyListItem = ({ unit, buyItem, updUnit }) => {
   const user = useSelector(userSelector);

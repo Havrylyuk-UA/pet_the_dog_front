@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { themeSelector, userSelector } from "../../redux/user/selectors";
+import { themeSelector, userSelector } from "../../redux/user/userSelectors";
 import { handleChangeTheme } from "../../redux/user/userSlice";
 import clsx from "clsx";
 import css from "./Header.module.scss";

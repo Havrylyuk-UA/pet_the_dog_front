@@ -1,6 +1,10 @@
 [
   {
     "name": "Mad Dog",
+    "description": {
+      "ua": "Дикий і безстрашний пес, який завдає шкоди ближнім ворогам.",
+      "en": "A wild and fearless dog that deals damage to nearby enemies."
+    },
     "currency": "coin",
     "price": 10,
     "multiple": 1.5,
@@ -13,6 +17,10 @@
   },
   {
     "name": "Alpha Wolf",
+    "description": {
+      "ua": "Лідер зграї, сильний і швидкий, веде армію до перемоги.",
+      "en": "The pack leader, strong and swift, leading the army to victory."
+    },
     "currency": "coin",
     "price": 50,
     "multiple": 2,
@@ -25,6 +33,10 @@
   },
   {
     "name": "Silver Tiger",
+    "description": {
+      "ua": "Безшумний хижак із блискавичною реакцією та зором, що бачить здобич здалеку.",
+      "en": "A stealthy hunter with lightning-fast attacks and keen sight."
+    },
     "currency": "coin",
     "price": 150,
     "multiple": 3,
@@ -37,6 +49,10 @@
   },
   {
     "name": "Golden Lion",
+    "description": {
+      "ua": "Король савани, що вселяє страх ворогам своїм грізним ревом.",
+      "en": "The king of the savannah, instilling fear in enemies with its mighty roar."
+    },
     "currency": "coin",
     "price": 500,
     "multiple": 5,
@@ -49,6 +65,10 @@
   },
   {
     "name": "Mystic Dragon",
+    "description": {
+      "ua": "Дракон з магічними силами, що дихає вогнем і змінює хід бою.",
+      "en": "A dragon with magical powers that breathes fire and changes the tide of battle."
+    },
     "currency": "coin",
     "price": 1000,
     "multiple": 8,
@@ -61,6 +81,10 @@
   },
   {
     "name": "Shadow Panther",
+    "description": {
+      "ua": "Невидимий мисливець, який нападає з темряви та знищує ворогів.",
+      "en": "An invisible hunter who strikes from the shadows and destroys foes."
+    },
     "currency": "coin",
     "price": 2000,
     "multiple": 12,
@@ -73,6 +97,10 @@
   },
   {
     "name": "Crimson Phoenix",
+    "description": {
+      "ua": "Вогняний фенікс, що відроджується з попелу та спалює ворогів.",
+      "en": "A fiery bird that rises from ashes and brings destructive flames."
+    },
     "currency": "coin",
     "price": 4000,
     "multiple": 17,
@@ -85,6 +113,10 @@
   },
   {
     "name": "Iron Golem",
+    "description": {
+      "ua": "Незламний кам’яний велетень, що захищає союзників своєю силою.",
+      "en": "An unbreakable stone giant protecting allies with its strength."
+    },
     "currency": "coin",
     "price": 8000,
     "multiple": 23,
@@ -97,6 +129,10 @@
   },
   {
     "name": "Storm Basilisk",
+    "description": {
+      "ua": "Змій, що володіє силою грому та паралізує ворогів своїм поглядом.",
+      "en": "A serpent wielding thunder's power and paralyzing foes with its gaze."
+    },
     "currency": "coin",
     "price": 16000,
     "multiple": 30,
@@ -109,6 +145,10 @@
   },
   {
     "name": "Ancient Behemoth",
+    "description": {
+      "ua": "Давній велетень, що знищує все на своєму шляху без пощади.",
+      "en": "A giant ancient creature that crushes everything in its path."
+    },
     "currency": "coin",
     "price": 32000,
     "multiple": 38,
@@ -121,6 +161,10 @@
   },
   {
     "name": "Frost Wyrm",
+    "description": {
+      "ua": "Крижаний дракон, що охолоджує ворогів своїм подихом та заморожує їх.",
+      "en": "A frost dragon that chills and freezes enemies with its breath."
+    },
     "currency": "coin",
     "price": 64000,
     "multiple": 47,
@@ -133,6 +177,10 @@
   },
   {
     "name": "Thunder Roc",
+    "description": {
+      "ua": "Гігантський птах-громовержець, що кидає блискавки по ворогах.",
+      "en": "A giant thunder bird that strikes enemies with lightning bolts."
+    },
     "currency": "coin",
     "price": 128000,
     "multiple": 57,
@@ -145,6 +193,10 @@
   },
   {
     "name": "Void Serpent",
+    "description": {
+      "ua": "Змій із безодні, що контролює темряву і поглинає світло.",
+      "en": "A serpent from the abyss controlling darkness and absorbing light."
+    },
     "currency": "coin",
     "price": 256000,
     "multiple": 68,
@@ -157,6 +209,10 @@
   },
   {
     "name": "Celestial Griffin",
+    "description": {
+      "ua": "Священний грифон, що оберігає небо та карає ворогів блискавицями.",
+      "en": "A sacred griffin guarding the skies and punishing foes with lightning."
+    },
     "currency": "coin",
     "price": 512000,
     "multiple": 80,
@@ -169,6 +225,10 @@
   },
   {
     "name": "Obsidian Colossus",
+    "description": {
+      "ua": "Обсидіановий гігант, непохитний та жахаючий в бою.",
+      "en": "An obsidian giant, unyielding and fearsome in battle."
+    },
     "currency": "coin",
     "price": 1024000,
     "multiple": 93,
@@ -181,6 +241,10 @@
   },
   {
     "name": "Nether Reaper",
+    "description": {
+      "ua": "Жнець з потойбічного світу, що збирає душі загиблих ворогів.",
+      "en": "A reaper from the netherworld harvesting the souls of fallen enemies."
+    },
     "currency": "coin",
     "price": 2048000,
     "multiple": 107,
@@ -193,6 +257,10 @@
   },
   {
     "name": "Chrono Drake",
+    "description": {
+      "ua": "Дракон, що маніпулює часом, сповільнюючи ворогів і пришвидшуючи союзників.",
+      "en": "A dragon manipulating time, slowing enemies and hastening allies."
+    },
     "currency": "coin",
     "price": 4096000,
     "multiple": 122,
@@ -205,6 +273,10 @@
   },
   {
     "name": "Eclipse Warden",
+    "description": {
+      "ua": "Охоронець затемнення, що приносить темряву і хаос на поле бою.",
+      "en": "The warden of the eclipse, bringing darkness and chaos to the battlefield."
+    },
     "currency": "coin",
     "price": 8192000,
     "multiple": 138,

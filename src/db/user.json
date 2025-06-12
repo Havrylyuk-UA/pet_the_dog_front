@@ -30,6 +30,7 @@
       "crit": 0.05
     },
     "battleStats": {
+      "rating": "Noobie",
       "wins": 0,
       "losses": 0,
       "totalFights": 0,
