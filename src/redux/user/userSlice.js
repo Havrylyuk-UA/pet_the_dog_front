@@ -38,30 +38,7 @@ const userSlice = createSlice({
 
       state.perSecond = Number(totalIncome.toFixed(6));
     },
-    buyNewUnit: (state, action) => {
-      const { name } = action.payload;
 
-      const unit = state.army.find((u) => u.name === name);
-
-      unit.count += 1;
-      unit.price = unit.price * 1.25;
-    },
-    upgradeUnit: (state, action) => {
-      const { name } = action.payload;
-
-      const unit = state.army.find((u) => u.name === name);
-
-      if (!unit) return;
-
-      const prevIncome = unit.income * unit.count;
-      const removePrevPerSec = state.perSecond - prevIncome;
-
-      unit.armyLvl += 1;
-      const newIncome = unit.income * unit.armyLvl * unit.count;
-      unit.armyUpgradeCost = unit.armyUpgradeCost * 1.75;
-
-      state.perSecond = removePrevPerSec + newIncome;
-    },
     upgradeUserClick: (state) => {
       state.updPerClickCost = state.updPerClickCost * 2.75;
       state.perClick += 1;
